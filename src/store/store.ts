@@ -7,7 +7,7 @@ import {
   STORE,
 } from "./storeTypes";
 
-const API_BASE = process.env.NEXT_PUBLIC_NODE_ENV === 'development' ? `http://localhost:3000/api/rag` : ''
+const API_BASE = process.env.NEXT_PUBLIC_NODE_ENV === 'development' ? `http://localhost:3000/api/rag` : 'https://talk-to-your-docs-seven.vercel.app/api/rag'
 
 export const useStore = create<STORE>((set, get) => ({
   // UI

@@ -32,7 +32,7 @@ const VerifyPage = () => {
   const seconds = timeLeft % 60;
 
   const formattedTime = `${minutes}:${seconds.toString().padStart(2, "0")}`;
-  const API_BASE = process.env.NEXT_PUBLIC_NODE_ENV === 'development' ? `http://localhost:3000/api` : ''
+  const API_BASE = process.env.NEXT_PUBLIC_NODE_ENV === 'development' ? `http://localhost:3000/api` : 'https://talk-to-your-docs-seven.vercel.app/api'
   async function handleVerification(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
     const key = sessionStorage.getItem("registration_key");

@@ -35,7 +35,7 @@ const AskQuery = () => {
   useEffect(() => {
     scrollToBottom()
   }, [messages])
-  const API_BASE = process.env.NEXT_PUBLIC_NODE_ENV === 'development' ? `http://localhost:3000/api` : ''
+  const API_BASE = process.env.NEXT_PUBLIC_NODE_ENV === 'development' ? `http://localhost:3000/api` : 'https://talk-to-your-docs-seven.vercel.app/api'
   async function handleQuery(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
     const documentID = activeDoc?.documentID;

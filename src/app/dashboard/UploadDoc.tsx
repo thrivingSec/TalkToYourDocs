@@ -44,7 +44,7 @@ const UploadDoc = () => {
       setFile(files[0]);
     }
   }
-  const API_BASE = process.env.NEXT_PUBLIC_NODE_ENV === 'development' ? `http://localhost:3000/api` : ''
+  const API_BASE = process.env.NEXT_PUBLIC_NODE_ENV === 'development' ? `http://localhost:3000/api` : 'https://talk-to-your-docs-seven.vercel.app/api'
   async function handleFileUpload(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!file || !namespace) return;

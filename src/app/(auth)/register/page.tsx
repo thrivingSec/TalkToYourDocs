@@ -34,7 +34,7 @@ const RegisterPage = () => {
       return toast.error("Password must be atleast 6 characters long!");
     return true;
   };
-  const API_BASE = process.env.NEXT_PUBLIC_NODE_ENV === 'development' ? `http://localhost:3000/api` : ''
+  const API_BASE = process.env.NEXT_PUBLIC_NODE_ENV === 'development' ? `http://localhost:3000/api` : 'https://talk-to-your-docs-seven.vercel.app/api'
   async function handleregistration(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
     const validation = formValidator(formData);
