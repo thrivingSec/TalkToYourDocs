@@ -27,6 +27,6 @@ const globalForRedis = global as unknown as {
 
 const redis = globalForRedis.redis ? globalForRedis.redis : redisClient()
 
-if(env.NODE_ENV !== 'production') globalForRedis.redis = redis
+if(process.env.NEXT_PUBLIC_NODE_ENV !== 'production') globalForRedis.redis = redis
 
 export default redis;
